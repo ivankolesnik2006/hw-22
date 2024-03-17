@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <form id="regForm">
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="dOfB">Дата народження</label>
+        <input type="text" id="dOfB" placeholder="1111.11.11" required>
+
+        <label>Стать:</label>
+        <input type="radio" id="male" name="gender" value="чоловіча">
+        <label for="male">Чоловіча</label>
+        <input type="radio" id="female" name="gender" value="жіноча">
+        <label for="female">Жіноча</label>
+
+        <label for="city">Місто:</label>
+        <select id="city" required>
+            <option value="">Оберіть місто</option>
+            <option value="Київ">Київ</option>
+            <option value="Луганськ">Луганськ</option>
+            <option value="Одеса">Одеса</option>
+            <option value="Харків">Харків</option>
+        </select>
+        
+        <label for="address">Адреса:</label>
+        <textarea  id="address"></textarea>
+
+        <label>Мови, якими володіє:</label>
+        <input type="checkbox" id="language" name="language" value="Українська">
+        <label for="language">Українська</label>
+        <input type="checkbox" id="language1" name="language" value="Англійська">
+        <label for="language1">Англійська</label>
+
+        <button type="button" onclick="showTable()">Зберегти</button>
+    </form>
+    
+    <div id="userData">
+        <h2>Введені дані:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Дата народження</th>
+                    <th>Стать</th>
+                    <th>Місто</th>
+                    <th>Адреса</th>
+                    <th>Мови</th>
+                </tr>
+            </thead>
+            <tbody id="userDataTable"></tbody>
+        </table>
+    </div>
+</body>
+</html>
